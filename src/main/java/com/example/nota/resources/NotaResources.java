@@ -19,7 +19,7 @@ public class NotaResources {
     @GetMapping("/") // Método que lista todos os produtos salvos no Banco de Dados
     public List<Nota> listaNotas() {
         return notaRepository.findAll();// Retorno
-        //http://localhost:8080/cadastro/notas  link da pagina Web.
+
     }
 
     @GetMapping("/{id}") // Lista um único produto pelo código do Id = (1, 2, 3 ... )

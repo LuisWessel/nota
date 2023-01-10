@@ -23,7 +23,7 @@ public class Nota implements Serializable {
     @ManyToOne // Relação de Muito para Um.
     @JoinColumn(name = "cliente") // Nome da tabela relacionada
     @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-    private Cliente contribuinte; // Classe e o Objeto sempre próximos da Anotação
+    private Cliente cliente; // Classe e o Objeto sempre próximos da Anotação
 
     private long numero;
 
@@ -45,12 +45,12 @@ public class Nota implements Serializable {
         this.id = id;
     }
 
-    public Cliente getContribuinte() {
-        return contribuinte;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setContribuinte(Cliente contribuinte) {
-        this.contribuinte = contribuinte;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public long getNumero() {
